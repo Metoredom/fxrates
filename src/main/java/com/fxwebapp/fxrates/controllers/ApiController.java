@@ -53,8 +53,9 @@ public class ApiController {
         try {
             syncService.syncCurrencies();
             syncService.syncRates();
+            Thread.sleep(1000);
             syncService.syncHistory();
-        } catch (JAXBException e) {
+        } catch (JAXBException | InterruptedException e) {
             throw new RuntimeException(e);
         }
         return ResponseEntity.ok("Successfully synchronised");
