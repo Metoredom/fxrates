@@ -1,0 +1,23 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$text: #000c;
+$background: white;
+
+.card-element{
+  color: $text;
+  background-color: $background;
+  border-color: $background;
+}
+
+.rate-arrow{
+  color: #41B0EE;
+}
+
+.rate-card{
+
+  transition: transform .4s cubic-bezier(0,0,.4,1),-webkit-transform .4s cubic-bezier(0,0,.4,1);
+
+  &:hover{
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+}
